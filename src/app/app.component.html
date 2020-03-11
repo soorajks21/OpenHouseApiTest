@@ -1,0 +1,11 @@
+<div class="container">
+  <h1 style="text-align: center">Open House AI</h1>
+  <div class="row">
+    <div class="col-md-6" *ngFor="let item of communities" style="text-align: center; padding: 20px;">
+      <h4>{{item.name}}</h4>
+      <img width="400" height="400" src="{{item.imgUrl}}" alt="Image not found">
+      <p>Average Home Price: {{item.avgPrice?item.avgPrice.toFixed(2):" Price Not Available"}}</p>
+    </div>
+  </div>
+</div>
+
