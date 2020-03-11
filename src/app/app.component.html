@@ -1,6 +1,47 @@
+<div
+  #myModal
+  class="modal  fade"
+  id="exampleModalCenter"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalCenterTitle"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">
+          Data fetch failed
+        </h5>
+
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+
+      <div class="modal-body">
+        Please click on retry to fetch data.
+      </div>
+
+      <div class="modal-footer">
+        <button
+          type="button"
+          class="btn btn-primary"
+          (click)="retryDataFetch()"
+        >
+          Retry
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <header>
   <div class="header-container">
-    <h1>Open House AI</h1>
+    <h1>OpenHouse.ai</h1>
   </div>
 </header>
 <div class="container list-container">
@@ -17,12 +58,13 @@
           <h3>{{ item.name }}</h3>
         </span>
       </span>
+
       <div class="card-content-container">
         Average Home Price:
         <div class="price">
           {{
             item.avgPrice
-              ? "CDN$: " + item.avgPrice.toFixed(2)
+              ? "CDN$ : " + item.avgPrice.toFixed(2)
               : " Price Not Available"
           }}
         </div>
