@@ -21,7 +21,9 @@
         Average Home Price:
         <div class="price">
           {{
-            item.avgPrice ? item.avgPrice.toFixed(2) : " Price Not Available"
+            item.avgPrice
+              ? "CDN$: " + item.avgPrice.toFixed(2)
+              : " Price Not Available"
           }}
         </div>
       </div>
