@@ -165,3 +165,39 @@ img {
   font-size: 1em;
   padding: 0.3em;
 }
+/* loader */
+.loader {
+  width: 45px;
+  height: 45px;
+  display: inline-block;
+  padding: 0px;
+  border-radius: 100%;
+  border: 5px solid;
+  border-top-color: rgba(246, 36, 89, 1);
+  border-bottom-color: rgba(255, 255, 255, 0.3);
+  border-left-color: rgba(246, 36, 89, 1);
+  border-right-color: rgba(255, 255, 255, 0.3);
+  -webkit-animation: loader4 1s ease-in-out infinite;
+  animation: loader 1s ease-in-out infinite;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100002;
+}
+@keyframes loader {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes loader {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
