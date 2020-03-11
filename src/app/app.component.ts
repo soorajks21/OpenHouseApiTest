@@ -49,6 +49,7 @@ export class AppComponent implements OnInit {
     );
   }
 
+  // For demo and testing data fetch failure
   getCommunityDataFailed() {
     this.appService.getCommunityFailed().subscribe(
       value => {
