@@ -1,4 +1,4 @@
-## Do an npm install to install the required packages
+## Do an npm install to add the required packages
 npm i
 ## Development server
 
