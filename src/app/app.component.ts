@@ -10,6 +10,9 @@ export class AppComponent implements OnInit {
   title = "app";
   communities: any;
   homes: any;
+  showLoader: boolean = true;
+  defaultLink = "/assets/sample-image.jpg";
+
   constructor(private appService: AppServiceService) {}
   ngOnInit() {
     this.appService.getCommunity().subscribe(value => {
@@ -45,6 +48,8 @@ export class AppComponent implements OnInit {
           community["avgPrice"] = avg;
         }
       });
+
+      this.showLoader = false;
     });
   }
 }
